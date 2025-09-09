@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Nexora Tech</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Nexora Tech</h2>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="products.html" class="nav-link">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="cart.html" class="nav-link active">
+                        Cart <span id="cart-count" class="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+    <main>
+        <section class="cart-section">
+            <div class="container">
+                <h1>Shopping Cart</h1>
+                
+                <div id="cart-content">
+                    <!-- Cart items will be loaded here -->
+                </div>
+
+                <div class="cart-summary" id="cart-summary" style="display: none;">
+                    <div class="summary-row">
+                        <span class="summary-label">Subtotal:</span>
+                        <span class="summary-value" id="cart-subtotal">$0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span class="summary-label">Shipping:</span>
+                        <span class="summary-value">Free</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span class="summary-label">Total:</span>
+                        <span class="summary-value" id="cart-total">$0.00</span>
+                    </div>
+                    <div class="checkout-section">
+                        <button class="btn btn-primary btn-large" onclick="simulateCheckout()">
+                            Proceed to Checkout
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Nexora Tech</h3>
+                    <p>Your trusted source for premium tech gadgets and accessories.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Email: info@Nexora Tech.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Nexora Tech. All rights reserved.</p>
+            </div>
+                    <!-- <div class="cart-item-actions">
+                        <div class="cart-item-price">$${item.price.toFixed(2)}</div>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn" onclick="updateCartQuantity(${item.id}, -1)">-</button>
+                            <span class="quantity-display">${item.quantity}</span>
+                            <button class="quantity-btn" onclick="updateCartQuantity(${item.id}, 1)">+</button>
+                        </div>
+                        <button class="remove-btn" onclick="removeFromCart(${item.id})">Remove</button>
+                    </div> -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            displayCart();
+        });
+    </script>
+</body>
+</html>

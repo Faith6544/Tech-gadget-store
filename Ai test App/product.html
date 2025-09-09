@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Nexora Tech</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Nexora Tech</h2>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="products.html" class="nav-link">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="cart.html" class="nav-link">
+                        Cart <span id="cart-count" class="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="product-detail">
+            <div class="container">
+                <div class="back-button">
+                    <a href="products.html" class="btn btn-secondary">← Back to Products</a>
+                </div>
+                
+                <div id="product-content">
+                    <!-- Product details will be loaded here -->
+                </div>
+
+                <!-- Reviews Section -->
+                <div class="reviews-section">
+                    <h3>Customer Reviews</h3>
+                    
+                    <!-- Review Form -->
+                    <div class="review-form-container">
+                        <h4>Write a Review</h4>
+                        <form id="review-form" class="review-form">
+                            <div class="form-group">
+                                <label for="reviewer-name">Name:</label>
+                                <input type="text" id="reviewer-name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="review-rating">Rating:</label>
+                                <select id="review-rating" name="rating" required>
+                                    <option value="">Select Rating</option>
+                                    <option value="5">5 Stars</option>
+                                    <option value="4">4 Stars</option>
+                                    <option value="3">3 Stars</option>
+                                    <option value="2">2 Stars</option>
+                                    <option value="1">1 Star</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="review-comment">Comment:</label>
+                                <textarea id="review-comment" name="comment" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit Review</button>
+                        </form>
+                    </div>
+
+                    <!-- Reviews Display -->
+                    <div id="reviews-container" class="reviews-container">
+                        <!-- Reviews will be displayed here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Nexora Tech</h3>
+                    <p>Your trusted source for premium tech gadgets and accessories.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Email: info@Nexora Tech.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Nexora Tech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Load product details when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            loadProductDetails();
+            setupReviewForm();
+        });
+    </script>
+</body>
+</html>
